@@ -3,20 +3,26 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: 'lalezar';
-    src: url('./assets/fonts/Lalezar.ttf');
+  font-family: "lalezar";
+  src: url("./assets/fonts/Lalezar.ttf");
 }
 @font-face {
-    font-family: 'Yekan';
-    src: url('./assets/fonts/Yekan.ttf');
+  font-family: "Yekan";
+  src: url("./assets/fonts/Yekan.ttf");
 }
-*{
-    margin: 5px;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Yekan' , sans-serif;
+* {
+  margin: 5px;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Yekan", sans-serif;
 }
 
-.lalezar{
-    font-family: 'Lalezar';
+.lalezar {
+  font-family: "Lalezar";
+}
+
+@layer components {
+  .textinput {
+    @apply;
+  }
 }
