@@ -7,6 +7,7 @@ import Picture from "./pages/Picture";
 import Members from "./pages/Members";
 import News from "./pages/news/News";
 import AddNews from "./pages/addNews/AddNews";
+import EditNews from "./pages/editNews/editNews";
 import Login from "./components/Login/Login";
 import Register from "./components/register/Register";
 
@@ -20,6 +21,8 @@ function App() {
         <Route path="/Members" element={<Members />} />
         <Route path="/News" element={<News />} />
         <Route path="add-news" element={<AddNews />} />
+        <Route path="edit-news" element={<EditNews />} />
+
         <Route path="/Picture" element={<Picture />} />
         <Route path="/Login" element={<Login />} />
         <Route path="/Register" element={<Register />} />

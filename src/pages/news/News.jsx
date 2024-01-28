@@ -4,6 +4,7 @@ function News() {
   return (
     <div>
       <Navbar />
+      <div>news</div>
     </div>
   );
 }
