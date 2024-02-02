@@ -1,13 +1,15 @@
 import React, { useState } from "react";
 import Navbar from "../Navbar/Navbar";
 import img from "../../assets/images/login.jpg";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { setCookie } from "../../utils/cooki";
 
 export default function Login() {
   const [loginData, setLoginData] = useState({
     email: "",
     password: "",
   });
+  const navigate = useNavigate()
   const changeHndlerLog = (e) => {
     const name = e.target.name;
     const value = e.target.value;
@@ -22,10 +24,10 @@ export default function Login() {
         "Content-type": "application/json; charset=UTF-8",
       },
     })
-      .then((res) => res.json())
-      .then((response) => console.log(response))
-      .catch((err) => console.log(err));
-    console.log(loginData);
+    .then((res) => res.json())
+    .then((response) => {setCookie(response.message.data)
+    navigate('/')})
+    .catch((err) => console.log(err));
   };
   return (
     <div>
@@ -36,7 +38,7 @@ export default function Login() {
         </div>
         <div>
           <div className="bg-gray-100 flex flex-col justify-center">
-            <form className="max-w-[400px] w-full mx-auto bg-white p-4">
+            <form onSubmit={submitLoginHandler} className="max-w-[400px] w-full mx-auto bg-white p-4">
               <h2 className="text-4xl font-bold text-center py-6">brand</h2>
               <div className="flex flex-col py2">
                 <label>ایمیل </label>
@@ -58,8 +60,7 @@ export default function Login() {
                   onChange={changeHndlerLog}
                 ></input>
               </div>
-              <button className="border w-full my-5 py-2 bg-indigo-600 hover:bg-indigo-500 text-white"
-              onChange={submitLoginHandler}>
+              <button type="submit" className="border w-full my-5 py-2 bg-indigo-600 hover:bg-indigo-500 text-white">
                 ورود
               </button>
               <div className="flex justify-between">

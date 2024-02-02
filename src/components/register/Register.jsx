@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import Navbar from "../Navbar/Navbar";
 import img from "../../assets/images/login.jpg";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function Register() {
+  const navigate = useNavigate();
+
   const [registerData, setRegisterData] = useState({
     first_name: "",
     last_name: "",
@@ -18,19 +20,23 @@ function Register() {
     setRegisterData({ ...registerData, [name]: value });
   };
 
-  const submitHandler = (e) => {
+  const submitHandler = async (e) => {
     e.preventDefault();
-    fetch("https://bushehrbasketball.pythonanywhere.com/auth/register/", {
-      method: "POST",
-      body: JSON.stringify(registerData),
-      headers: {
-        "Content-type": "application/json; charset=UTF-8",
-      },
-    })
-      .then((res) => res.json())
-      .then((response) => console.log(response))
-      .catch((err) => console.log(err));
-    console.log(registerData);
+    try {
+      const res = await fetch("https://bushehrbasketball.pythonanywhere.com/auth/register/", {
+        method: "POST",
+        body: JSON.stringify(registerData),
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+        },
+      })
+      const data = await res.json()
+      data.success && navigate('/Login')
+      console.log(data)
+    } catch (error) {
+      console.log(error)
+    }
+    
   };
 
   return (
@@ -98,7 +104,7 @@ function Register() {
                 className="border w-full my-5 py-2 bg-indigo-600 hover:bg-indigo-500 text-white"
                 onClick={submitHandler}
               >
-                ورود
+                ثبت نام
               </button>
             </form>
           </div>
