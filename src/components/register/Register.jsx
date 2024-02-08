@@ -25,6 +25,8 @@ function Register() {
       body: JSON.stringify(registerData),
       headers: {
         "Content-type": "application/json; charset=UTF-8",
+      
+
       },
     })
       .then((res) => res.json())
