@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import { useEffect } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import logo from "../../assets/images/logo.png";
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -23,9 +23,11 @@ const Navbar = () => {
       <nav className="">
         <div className="flex items-center justify-between">
           <div className="lg:block hidden">
-            <button className="w-[105px] h-10 bg-red-400 rounded-[40px] ">
-              ورود
-            </button>
+          <Link to={'/Login'}>
+              <button className="w-[105px] h-10 bg-red-400 rounded-[40px] ">
+                ورود
+              </button>
+            </Link>
             <img src="../assets/images/Search.svg" />
           </div>
           <div className="lg:flex items-center gap-3 hidden text-stone-700">
