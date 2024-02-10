@@ -22,37 +22,38 @@ function Register() {
 
   const submitHandler = async (e) => {
     e.preventDefault();
-<<<<<<< HEAD
+    HEAD;
     fetch("https://bushehrbasketball.pythonanywhere.com/auth/register/", {
       method: "POST",
       body: JSON.stringify(registerData),
       headers: {
         "Content-type": "application/json; charset=UTF-8",
-      
-
       },
     })
       .then((res) => res.json())
       .then((response) => console.log(response))
       .catch((err) => console.log(err));
     console.log(registerData);
-=======
+
     try {
-      const res = await fetch("https://bushehrbasketball.pythonanywhere.com/auth/register/", {
-        method: "POST",
-        body: JSON.stringify(registerData),
-        headers: {
-          "Content-type": "application/json; charset=UTF-8",
-        },
-      })
-      const data = await res.json()
-      data.success && navigate('/Login')
-      console.log(data)
+      const res = await fetch(
+        "https://bushehrbasketball.pythonanywhere.com/auth/register/",
+        {
+          method: "POST",
+          body: JSON.stringify(registerData),
+          headers: {
+            "Content-type": "application/json; charset=UTF-8",
+          },
+        }
+      );
+      const data = await res.json();
+      data.success && navigate("/Login");
+      console.log(data);
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
-    
->>>>>>> fb6e1140c76742cd330ead04d069c331e570bc49
+
+    fb6e1140c76742cd330ead04d069c331e570bc49;
   };
 
   return (
