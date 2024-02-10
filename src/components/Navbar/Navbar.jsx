@@ -23,9 +23,9 @@ const Navbar = () => {
       <nav className="">
         <div className="flex items-center justify-between">
           <div className="lg:block hidden">
-          <Link to={'/Login'}>
+            <Link to={"/Login"}>
               <button className="w-[105px] h-10 bg-red-400 rounded-[40px] ">
-                ورود
+                ورود/ثبت نام
               </button>
             </Link>
             <img src="../assets/images/Search.svg" />
