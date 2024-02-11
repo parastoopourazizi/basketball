@@ -1,19 +1,16 @@
 import Navbar from "../components/Navbar/Navbar";
+import Member from "../components/Member/Member";
 
 function Members() {
   return (
     <div>
       <Navbar />
       <h2 className="text-center font-bold text-2xl">بسکتبال بوشهر</h2>
-      <div className="container mx-auto">
-        <div className="flex grid-cols-2 justify-center">
-        <div className="shrink w-64 h-14 ">
-            اعضای کمیته
+      <div className=" grid grid-cols-10 gap-4 mx-auto max-w-[1280px]   ">
+        <div className="col-span-8  "> 
+        <Member/>
         </div>
-        <div className="flex-none w-14 h-14">hi</div>
-
-        </div>
-        
+        <div className="col-span-2 ">hi</div>
       </div>
     </div>
   );
