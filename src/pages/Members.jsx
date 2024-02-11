@@ -5,13 +5,26 @@ function Members() {
   return (
     <div>
       <Navbar />
-      <h2 className="text-center font-bold text-2xl">بسکتبال بوشهر</h2>
+      <h2 className="text-center text-5xl font-bold text-2xl">بسکتبال بوشهر</h2>
+      <h1 className="text-3xl">اعضای کمیته</h1>
       <div className=" grid grid-cols-10 gap-4 mx-auto max-w-[1280px]   ">
-        <div className="col-span-8  "> 
-        <Member/>
+        <div className="col-span-8  ">
+          <Member />
+          <Member />
+          <Member />
+          <Member />
+          <Member />
+         
         </div>
-        <div className="col-span-2 ">hi</div>
+
+        <div className="col-span-2 text-3xl ">لینک ها</div>
       </div>
+      <div className="text-center">
+      <button className="  border-2 border-inherit rounded-3xl py-1 px-12">بیشتر</button>
+
+      </div>
+      
+      
     </div>
   );
 }
