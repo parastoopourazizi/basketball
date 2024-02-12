@@ -12,7 +12,7 @@ function News() {
     <div>
       <Navbar />
       <div>
-        <div className="container  flex grid grid-cols-3 ">
+        <div className="container grid grid-cols-3 ">
           <NewItem />
           <NewItem />
           <NewItem />

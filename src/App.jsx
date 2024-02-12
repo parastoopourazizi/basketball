@@ -6,10 +6,11 @@ import History from "./pages/History";
 import Picture from "./pages/Picture";
 import Members from "./pages/Members";
 import News from "./pages/news/News";
-import AddNews from "./pages/addNews/AddNews";
-import EditNews from "./pages/editNews/editNews";
 import Login from "./components/Login/Login";
 import Register from "./components/register/Register";
+import AdminPanel from "./admin/AdminPanel";
+import NewsPage from "./admin/news/NewsPanel";
+import ImagesPanel from "./admin/images/ImagesPanel";
 
 function App() {
   return (
@@ -20,12 +21,13 @@ function App() {
         <Route path="/History" element={<History />} />
         <Route path="/Members" element={<Members />} />
         <Route path="/News" element={<News />} />
-        <Route path="add-news/:newsId" element={<AddNews />} />
-        <Route path="edit-news/:newsId" element={<EditNews />} />
 
         <Route path="/Picture" element={<Picture />} />
         <Route path="/Login" element={<Login />} />
         <Route path="/Register" element={<Register />} />
+        <Route path="/admin" element={ <AdminPanel /> } />
+        <Route path="/admin/news" element={ <NewsPage /> } />
+        <Route path="/admin/images" element={ <ImagesPanel /> } />
       </Routes>
     </BrowserRouter>
   );
