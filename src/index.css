@@ -11,9 +11,6 @@
   src: url("./assets/fonts/Yekan.ttf");
 }
 * {
-  margin: 5px;
-  padding: 0;
-  box-sizing: border-box;
   font-family: "Yekan", sans-serif;
 }
 
@@ -21,8 +18,3 @@
   font-family: "Lalezar";
 }
 
-@layer components {
-  .textinput {
-    @apply;
-  }
-}
