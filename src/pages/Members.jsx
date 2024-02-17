@@ -7,7 +7,7 @@ function Members() {
       <Navbar />
       <h2 className="text-center text-5xl font-bold text-2xl">بسکتبال بوشهر</h2>
       <h1 className="text-3xl">اعضای کمیته</h1>
-      <div className=" grid grid-cols-10 gap-4 mx-auto max-w-[1280px]   ">
+      <div className=" grid grid-cols-10 gap-4 mx-auto max-w-[1280px] sm:230px">
         <div className="col-span-8  ">
           <Member />
           <Member />
