@@ -3,7 +3,7 @@ function Member() {
   return (
     <div>
         
-      <div className=" flex  justify-center">
+      <div className=" flex  justify-center  py-8">
         <img src={member} alt=""/>
         <div>
           <h2 className="text-base">نام و نام خانوادگی</h2>
