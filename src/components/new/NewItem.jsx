@@ -1,6 +1,6 @@
 import React from "react";
 
-function NewItem() {
+function NewItem(props) {
   return (
     <div>
       <div className=" max-w-sm rounded overflow-hidden shadow-lg">

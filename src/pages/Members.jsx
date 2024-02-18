@@ -1,5 +1,8 @@
 import Navbar from "../components/Navbar/Navbar";
 import Member from "../components/Member/Member";
+import { FaTelegram } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
 
 function Members() {
   return (
@@ -16,8 +19,27 @@ function Members() {
           <Member />
          
         </div>
-
+        <div>
         <div className="col-span-2 text-3xl ">لینک ها</div>
+        <div>
+        <FaTelegram />
+
+        </div>
+        <div>
+        <FaInstagram />
+
+        </div>
+        <div>
+        <MdEmail />
+
+        </div>
+       
+        
+       
+
+        </div>
+
+        
       </div>
       <div className="text-center">
       <button className="  border-2 border-inherit rounded-3xl py-1 px-12">بیشتر</button>

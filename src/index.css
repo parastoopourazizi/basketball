@@ -10,9 +10,14 @@
   font-family: "Yekan";
   src: url("./assets/fonts/Yekan.ttf");
 }
-* {
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 1280px;
   font-family: "Yekan", sans-serif;
 }
+
 
 .lalezar {
   font-family: "Lalezar";

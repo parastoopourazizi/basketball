@@ -4,30 +4,31 @@ import NewItem from "../../components/new/NewItem";
 import axios from "axios";
 
 function News() {
-  const [article , setArticle] = useState() ;
+  const [article, setArticle] = useState([]);
   console.log(article);
-  
 
-  useEffect(() =>{
+  useEffect(() => {
     axios
-    .get("https://bushehrbasketball.pythonanywhere.com/basketball/news/")
-    .then((response) => setArticle(response.data));
-
+      .get("https://bushehrbasketball.pythonanywhere.com/basketball/news/")
+      .then((response) => setArticle(response.data));
   }, []);
   return (
     <div>
       <Navbar />
       <div>
-
         <div className="container  flex grid grid-cols-3 ">
           {article.map((article) => (
-            <NewItem {...article}/>
+            <NewItem {...article} />
           ))}
 
-       
-        <button>بیشتر</button>
+         
+        </div>
+        <div className="text-center  py-10" >
+        <button className=" border-2 border-inherit rounded-3xl py-1 px-12">بیشتر</button>
+
+        </div>
+        
       </div>
-    </div>
     </div>
   );
 }
