@@ -4,13 +4,9 @@ import NewItem from "../../components/new/NewItem";
 import axios from "axios";
 
 function News() {
-  const [article , setArticle] = useState({
-    id : "",
-    image : "",
-    context : "",
-    created_at : "",
-    updated_at : "",
-  });
+  const [article , setArticle] = useState() ;
+  console.log(article);
+  
 
   useEffect(() =>{
     axios
