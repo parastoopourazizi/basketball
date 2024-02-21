@@ -3,9 +3,20 @@ import Member from "../components/Member/Member";
 import { FaTelegram } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 function Members() {
+  const[members , setMembers] = useState([]);
+  console.log(members);
   
+
+  useEffect(() => {
+    axios
+    .get("https://bushehrbasketball.pythonanywhere.com/basketball/members/" )
+    .then((response) => setMembers(response.data));
+  },[]);
+
   return (
     <div>
       <Navbar />
@@ -13,11 +24,9 @@ function Members() {
       <h1 className="text-3xl">اعضای کمیته</h1>
       <div className=" grid grid-cols-10 gap-4 mx-auto max-w-[1280px] sm:230px  py-6 items-center ">
         <div className="col-span-8  ">
-          <Member />
-          <Member />
-          <Member />
-          <Member />
-          <Member />
+          {members.map((member) =>(
+            <Member {...member}/>
+          ))}
         </div>
         <div>
           <div className="col-span-2 text-3xl ">لینک ها</div>

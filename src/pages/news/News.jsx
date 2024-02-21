@@ -3,7 +3,7 @@ import Navbar from "../../components/Navbar/Navbar";
 import NewItem from "../../components/new/NewItem";
 import axios from "axios";
 
-function News() {
+function News(props) {
   const [article, setArticle] = useState([]);
  
 
@@ -16,7 +16,7 @@ function News() {
     <div>
       <Navbar />
       <div>
-        <div className="container  flex grid grid-cols-3 ">
+        <div className="container  flex  grid-cols-3 ">
           {article.map((article) => (
             <NewItem {...article} />
           ))}
