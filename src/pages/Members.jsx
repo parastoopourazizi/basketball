@@ -5,6 +5,7 @@ import { FaInstagram } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 
 function Members() {
+  
   return (
     <div>
       <Navbar />
@@ -40,7 +41,7 @@ function Members() {
           </div>
         </div>
       </div>
-      <div className="text-center">
+      <div className="text-center py-10">
         <button className="  border-2 border-inherit rounded-3xl py-1 px-12">
           بیشتر
         </button>

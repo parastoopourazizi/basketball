@@ -5,7 +5,7 @@ import axios from "axios";
 
 function News() {
   const [article, setArticle] = useState([]);
-  console.log(article);
+ 
 
   useEffect(() => {
     axios
